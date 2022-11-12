@@ -1,11 +1,17 @@
 package com.bridgelab;
-//UC1 - As a Gambler, would start with a stake of $100 every day and bet $1 every game.
+//UC2 - As a Gambler make $1 bet so either win or loose $1
 public class Gambling {
     public static void main(String[] args) {
         System.out.println("Welcome to the Gambling Simulation Problem");
         int stake = 100;
         int bet = 1;
 
-        System.out.println("Today Stake :: " +stake+ " bet on each game is :: "+bet);
+        if(Math.random() < 0.5){
+            stake++;
+            System.out.println("You won the game total stake is ::" + stake);
+        }else {
+            stake--;
+            System.out.println("You loose the game total stake is ::" + stake);
+        }
     }
 }
